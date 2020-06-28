@@ -18,6 +18,12 @@ class BthFontesDados:
     def getToken(self):
         return self.p_token
 
+    # Retorna o valor do token em uso
+    def getDadosToken(self):
+        if self.dadosToken == {} and self.p_token != '':
+            self.gerarDadosToken(self.p_token)
+        return self.dadosToken
+
     # Seta o valor para token genérico da classe
     def setToken(self, n):
         self.p_token = n
@@ -40,9 +46,6 @@ class BthFontesDados:
         if self.dadosEntidade == {}:
             self.gerarDadosEntidade()
         return self.dadosEntidade
-
-    def getSelf(self):
-        return self
 
     # Busca endereço da fonte desejado no JSON local de ativos
     def getUrlFonteBetha(self, args):
