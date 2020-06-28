@@ -45,5 +45,5 @@ from bthtools import *
 bth = BthFontesDados()
 
 # Setando o token de serviço na classe para utilização dos métodos de consulta
-bth.setToken('034453a8-df56-4606-bd1f-8403518f7199')
+bth.setToken('034453a8-xxxx-xxxx-xxxx-8403518f7199')
 ```
